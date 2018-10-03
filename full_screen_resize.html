@@ -52,7 +52,8 @@
             canvas.style.width = windowWidth + "px";
             canvas.style.height = windowHeight + "px";
             game.renderer.resize(windowWidth, windowHeight);
-            camera.setSize(windowWidth, windowHeight)
+            camera.setSize(windowWidth, windowHeight);
+            game.resize(windowWidth, windowHeight);
     }
     window.addEventListener('resize', window_resize);
     </script>
