@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="phaser/phaser.js"></script>
+    <style>
+        html, body, #phaser-container {
+            height:  100%
+        }
+    </style>
+</head>
+<body>
+    <script>
+    var config = {
+        height: window.innerHeight,
+        width: window.innerWidth,
+        type: Phaser.AUTO,
+        autoResize: true,
+        //parent: 'phaser-container',
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
+
+    var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+
+        this.load.image('sky', 'assets/space3.png');
+        this.load.image('logo', 'assets/phaser3-logo.png');
+    }
+
+    function create ()
+    {
+        this.add.image(400, 300, 'sky');
+
+        var logo = this.add.sprite(400, 400, 'logo');
+
+        logo.setInteractive({'pixelPerfect': true});
+        logo.on('pointerup', click_logo)
+
+    }
+    function click_logo() {
+        console.log('Click');
+    }
+    function window_resize() {
+        var windowWidth = window.innerWidth,
+            windowHeight = window.innerHeight,
+            canvas = document.querySelector("canvas"),
+            camera = game.scene.scenes[0].cameras.main;
+            canvas.style.width = windowWidth + "px";
+            canvas.style.height = windowHeight + "px";
+            game.renderer.resize(windowWidth, windowHeight);
+            camera.setSize(windowWidth, windowHeight)
+    }
+    window.addEventListener('resize', window_resize);
+    </script>
+
+</body>
+</html>
