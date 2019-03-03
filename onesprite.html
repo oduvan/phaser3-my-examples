@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="phaser/phaser.js"></script>
+    <style>
+        html, body, #phaser-container {
+            height:  100%
+        }
+    </style>
+</head>
+<body>
+    <script>
+    var config = {
+        height: window.innerHeight,
+        width: window.innerWidth,
+        type: Phaser.AUTO,
+        autoResize: true,
+        //parent: 'phaser-container',
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
+
+    var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+        this.load.path = 'assets/';
+        this.load.multiatlas('all', 'all-full.json');
+    }
+
+    function create ()
+    {
+        // var r1 = this.add.rectangle(200, 200, 148, 148, 0x6666ff);
+        // var r2 = this.add.rectangle(300, 300, 148, 148, 0x9966ff);
+        // r2.setAlpha(0.4)
+        var building = this.add.sprite(200, 200,'all', 'buildings/commandCenter_2.png');
+        building.setInteractive({pixelPerfect: true});
+        building.setScale(0.95);
+        var tween = this.tweens.add({
+                targets: building,
+                scaleX: 1,
+                scaleY: 1,
+                duration: 100,
+                ease: 'Sine.easeInOut'
+            });
+        building.on('pointerup', () => {
+            tween.restart();
+        })
+
+        var building2 = this.add.sprite(700, 200,'all', 'buildings/commandCenter_1.png');
+        building2.setInteractive({pixelPerfect: true});
+        var buildin3 = this.add.sprite(700, 200,'all', 'buildings/commandCenter_2.png');
+        buildin3.setAlpha(0);
+        const clickUpgrade = () => {
+            this.tweens.add({
+               targets: building2,
+               alpha: 0,
+               duration: 400,
+               ease: 'Sine.easeInOut'
+           }) 
+           this.tweens.add({
+               targets: buildin3,
+               alpha: 1,
+               duration: 400,
+               ease: 'Sine.easeInOut'
+           }) 
+        };
+        building2.on('pointerup', clickUpgrade);
+    }
+    </script>
+
+</body>
+</html>

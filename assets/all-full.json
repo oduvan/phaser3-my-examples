@@ -1,0 +1,170 @@
+{
+	"textures": [
+		{
+			"image": "all-0full.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 949,
+				"h": 1030
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "commandCenter_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 531,
+						"h": 382
+					},
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 26,
+						"w": 504,
+						"h": 336
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 504,
+						"h": 336
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "commandCenter_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 531,
+						"h": 382
+					},
+					"spriteSourceSize": {
+						"x": 63,
+						"y": 0,
+						"w": 422,
+						"h": 343
+					},
+					"frame": {
+						"x": 507,
+						"y": 1,
+						"w": 422,
+						"h": 343
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "commandCenter_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 531,
+						"h": 382
+					},
+					"spriteSourceSize": {
+						"x": 63,
+						"y": 0,
+						"w": 422,
+						"h": 343
+					},
+					"frame": {
+						"x": 1,
+						"y": 339,
+						"w": 422,
+						"h": 343
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "commandCenter_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 531,
+						"h": 382
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 27,
+						"w": 523,
+						"h": 337
+					},
+					"frame": {
+						"x": 425,
+						"y": 346,
+						"w": 523,
+						"h": 337
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "commandCenter_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 531,
+						"h": 382
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 23,
+						"w": 487,
+						"h": 344
+					},
+					"frame": {
+						"x": 1,
+						"y": 685,
+						"w": 487,
+						"h": 344
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "commandCenter_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 531,
+						"h": 382
+					},
+					"spriteSourceSize": {
+						"x": 63,
+						"y": 0,
+						"w": 424,
+						"h": 344
+					},
+					"frame": {
+						"x": 490,
+						"y": 685,
+						"w": 424,
+						"h": 344
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ad55535358a70043b754337bebdb5e7b:066ee8033a5e349c854517e0a8b210d0:78bc7331ba4bbc661c4245b3479b9877$"
+	}
+}

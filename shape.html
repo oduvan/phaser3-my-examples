@@ -32,23 +32,9 @@
 
     function create ()
     {
-        var frames = this.anims.generateFrameNames('all', { 
-            prefix: 'animation/droid_grade_',
-            start: 1,
-            end: 34, 
-            zeroPad: 5,
-            suffix: '.png'
-            });
-        console.log(frames);
-        this.anims.create({ 
-            key: 'droid_grade', 
-            frames: frames, 
-            repeat: -1 });
-        //this.anims.create({ key: 'fly', frames: frames, repeat: -1 });
-
-        var city = this.add.sprite(400, 400);
-
-        city.play('droid_grade');
+        var r1 = this.add.rectangle(200, 200, 148, 148, 0x6666ff);
+        var r2 = this.add.rectangle(300, 300, 148, 148, 0x9966ff);
+        r2.setAlpha(0.4)
 
     }
     </script>
