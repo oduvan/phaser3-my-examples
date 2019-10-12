@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="phaser/phaser.js"></script>
+    <style>
+        html, body, #phaser-container {
+            height:  100%
+        }
+        #obj_click {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            top: 100px;
+            left: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="obj_click" onclick="click_red(event)">click on me</div>
+    <div id="phaser-container"></div>
+    <script>
+    var config = {
+        height: window.innerHeight,
+        width: window.innerWidth,
+        type: Phaser.AUTO,
+        autoResize: true,
+        parent: 'phaser-container',
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
+
+    var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+        // this.load.path = 'assets/';
+        // this.load.multiatlas('all', 'all-full.json');
+    }
+
+    function create ()
+    {
+        var r1 = this.add.rectangle(200, 200, 148, 148, 0x6666ff);
+        r1.setInteractive();
+        r1.on('pointerup', click_blue);
+
+    }
+
+    function click_blue() {
+        alert('CLICK BLUE');
+    }
+
+    function click_red(event) {
+        alert('CLICK RED')
+    }
+    </script>
+
+</body>
+</html>
